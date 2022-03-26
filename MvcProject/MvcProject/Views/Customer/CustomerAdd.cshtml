@@ -1,0 +1,28 @@
+﻿@model MvcProject.Models.Entity.Customers
+@{
+    ViewBag.Title = "CustomerAdd";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<form class="form-group" method="post">
+    <div>
+        <label>Adı</label>
+        <input type="text" name="FirstName" class="form-control" />
+        @Html.ValidationMessageFor(c=>c.FirstName,"",new { @style="color:red" })
+    </div>
+    <div>
+        <label>Soyadı</label>
+        <input type="text" name="LastName" class="form-control" />
+        @Html.ValidationMessageFor(c => c.LastName, "", new { @style = "color:red" })
+    </div>
+    <div>
+        <button id="btnclick" class="btn btn-primary" style="margin-top:5px">Müşteri Ekle</button>
+    </div>
+        @*<script>
+            $('#btnclick').click(function () {
+                alert("Müşteri eklendi.")
+            });
+        </script>*@
+</form>
+
+

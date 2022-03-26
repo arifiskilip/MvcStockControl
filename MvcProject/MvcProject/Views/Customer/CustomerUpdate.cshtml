@@ -1,0 +1,21 @@
+﻿@model MvcProject.Models.Entity.Customers
+@{
+    ViewBag.Title = "CustomerUpdate";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+@using(Html.BeginForm("CustomerUpdate","Customer",FormMethod.Post))
+    {
+        <div class="form-group">
+            @Html.LabelFor(c => c.Id)
+            @Html.TextBoxFor(c => c.Id, new { @class = "form-control", @readonly = true })
+    <br />
+            @Html.LabelFor(c => c.FirstName)
+            @Html.TextBoxFor(c => c.FirstName, new { @class="form-control"   })
+    <br />
+            @Html.LabelFor(c => c.LastName)
+            @Html.TextBoxFor(c => c.LastName, new { @class = "form-control" })
+        </div>
+        <button class="btn btn-warning">Müşteriyi Güncelle</button>
+    }
+
+
