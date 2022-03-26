@@ -1,0 +1,2 @@
+# MvcStockControl
+ First Mvc Project
